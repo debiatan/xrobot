@@ -45,7 +45,7 @@ class XRobot(object):
         """
         return self.size
 
-    def mouse_click(self, button):
+    def click(self, button):
         """ Press and release mouse 'button'
         (1:left, 2:middle, 3:right, 4:scroll up 5: scroll down). """
         self.mouse_down(button)
@@ -63,7 +63,7 @@ class XRobot(object):
         Xlib.ext.xtest.fake_input(self.display, Xlib.X.ButtonRelease, button)
         self.display.sync()
 
-    def mouse_move(self, x, y):
+    def move(self, x, y):
         """ Move mouse pointer to (x, y) coordinates. """
         self.root.warp_pointer(x, y)
         self.display.sync()
@@ -155,8 +155,8 @@ if __name__ == '__main__':
     robot = XRobot()
     x, y = robot.mouse_pos()
     print('Current mouse position: x =', x, 'y =', y)
-    robot.mouse_move(10, 10)
-    robot.mouse_click(1)
+    robot.move(10, 10)
+    robot.click(1)
     robot.key_down('a')
     robot.key_up('a')
     robot.key_down('comma')

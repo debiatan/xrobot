@@ -59,7 +59,7 @@ Python X11 event automation library
          |      Release key associated to key description 'c'.
          |      Refer to XRobot.key docstring for common key descriptions.
          |  
-         |  mouse_click(self, button)
+         |  click(self, button)
          |      Press and release mouse 'button'
          |      (1:left, 2:middle, 3:right, 4:scroll up 5: scroll down).
          |  
@@ -67,7 +67,7 @@ Python X11 event automation library
          |      Press mouse 'button' 
          |      (1:left, 2:middle, 3:right, 4:scroll up 5: scroll down).
          |  
-         |  mouse_move(self, x, y)
+         |  move(self, x, y)
          |      Move mouse pointer to (x, y) coordinates.
          |  
          |  mouse_pos(self)
@@ -78,5 +78,5 @@ Python X11 event automation library
          |      (1:left, 2:middle, 3:right, 4:scroll up 5: scroll down).
          |  
          |  screen_resolution(self)
-         |      Returns (width, height) of the screen at the time of creation of 
+         |      Returns (width, height) of the screen at the time of creation of
          |      the XRobot object.
