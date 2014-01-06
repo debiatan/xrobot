@@ -129,7 +129,7 @@ class XRobot(object):
         # From: http://ubuntuforums.org/showpost.php?p=2681009&postcount=5
         w = gtk.gdk.get_default_root_window()
         pb = gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, False, 8, width, height)
-        pb = pb.get_from_drawable(w, w.get_colormap(), 0, 0, 0, 0, 
+        pb = pb.get_from_drawable(w, w.get_colormap(), x, y, 0, 0, 
                                   width, height)
         return pb.get_pixels_array()
 
